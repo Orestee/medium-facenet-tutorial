@@ -181,9 +181,9 @@ def _evaluate_classifier(emb_array, label_array, classifier_filename):
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser(add_help=True)
-    parser.add_argument('--model-path', type=str, action='store', default='/content/medium-facenet-tutorial/etc/20170511-185253/20170511-185253.pb', dest='model_path',
+    parser.add_argument('--model-path', type=str, action='store', dest='model_path',
                         help='Path to model protobuf graph')
-    parser.add_argument('--input-dir', type=str, action='store', default='/content/medium-facenet-tutorial/output/intermediate', dest='input_dir',
+    parser.add_argument('--input-dir', type=str, action='store', dest='input_dir',
                         help='Input path of data to train on')
     parser.add_argument('--batch-size', type=int, action='store', dest='batch_size',
                         help='Input path of data to train on', default=128)
@@ -195,9 +195,9 @@ if __name__ == '__main__':
                         help='Ratio to split train/test dataset')
     parser.add_argument('--min-num-images-per-class', type=int, action='store', default=10,
                         dest='min_images_per_class', help='Minimum number of images per class')
-    parser.add_argument('--classifier-path', type=str, action='store', default='/content/medium-facenet-tutorial/output/classifier.pkl', dest='classifier_path',
+    parser.add_argument('--classifier-path', type=str, action='store', dest='classifier_path',
                         help='Path to output trained classifier model')
-    parser.add_argument('--is-train', action='store_true', dest='is_train', default=True,
+    parser.add_argument('--is-train', action='store_true', dest='is_train', default=False,
                         help='Flag to determine if train or evaluate')
 
     args = parser.parse_args()
