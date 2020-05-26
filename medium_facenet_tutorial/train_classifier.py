@@ -195,7 +195,7 @@ if __name__ == '__main__':
                         help='Ratio to split train/test dataset')
     parser.add_argument('--min-num-images-per-class', type=int, action='store', default=10,
                         dest='min_images_per_class', help='Minimum number of images per class')
-    parser.add_argument('--classifier-path', type=str, action='store', default='/medium-facenet-tutorial/output/classifier.pkl', dest='classifier_path',
+    parser.add_argument('--classifier-path', type=str, action='store', default='/content/medium-facenet-tutorial/output/classifier.pkl', dest='classifier_path',
                         help='Path to output trained classifier model')
     parser.add_argument('--is-train', action='store_true', dest='is_train', default=True,
                         help='Flag to determine if train or evaluate')
